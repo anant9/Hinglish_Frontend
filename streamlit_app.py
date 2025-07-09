@@ -58,6 +58,6 @@ if st.session_state.jwt_token:
             else:
                 st.error(f"Error from backend: {response.status_code} {response.text}")
 
-        except Exception as e:
+        except  Exception as e:
             st.error(f"Error calling backend: {e}")
 
