@@ -25,12 +25,8 @@ else:
     st.info("🔐 Please login with Google first.")
     login_url = f"{BACKEND_URL}/login"
     if st.button("Login with Google"):
-         st.markdown(
-        f"""
-        <meta http-equiv="refresh" content="0; url={login_url}">
-        """,
-        unsafe_allow_html=True,
-    )
+        st.write(f'<meta http-equiv="refresh" content="0; URL={login_url}">', unsafe_allow_html=True)
+
 
 query_params = st.query_params
 if "token" in query_params:
