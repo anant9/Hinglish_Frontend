@@ -13,7 +13,7 @@ load_dotenv()
 
 BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:8000")
 
-st.title("🎬 Hindi to Hinglish Subtitle Converter")
+st.title("🎬 हिंदी to Hinglish Subtitle Converter")
 
 # ---- Google Login ----
 if "jwt_token" not in st.session_state:
@@ -36,7 +36,7 @@ if "token" in query_params:
 
 # ---- Subtitle Upload ----
 if st.session_state.jwt_token:
-    uploaded_file = st.file_uploader("Upload Hindi .srt File", type=["srt"])
+    uploaded_file = st.file_uploader("Upload हिंदी .srt File", type=["srt"])
 
     if uploaded_file:
         st.write("📤 Sending file to backend for transliteration...")
